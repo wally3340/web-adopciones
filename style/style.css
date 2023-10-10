@@ -8,7 +8,7 @@
 body {
     margin: 0;
     padding: 0;
-  
+
 }
 
 /*estilo de la barra de navegacion*/
@@ -116,12 +116,12 @@ h1 {
 
     .navbar-links ul li {
         text-align: center;
-       
+
     }
 
     .navbar-links ul li a {
         padding: .5rem 1rem;
-        
+
     }
 
     .navbar-links.active {
@@ -280,7 +280,7 @@ footer {
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 30px;
-    
+
 
 
 
@@ -289,8 +289,8 @@ footer {
 .footer {
     display: inline;
     justify-content: space-between;
-    background-color:blanchedalmond;
-    border:1px solid #f8df95;
+    background-color: blanchedalmond;
+    border: 1px solid #f8df95;
     border-radius: 10px;
 
 }
@@ -302,12 +302,12 @@ h3 {
     margin-bottom: 15px;
 }
 
-.footer a{
+.footer a {
     margin: 10px 40px;
     color: blue;
     background-color: blanchedalmond;
-   
-    
+
+
 }
 
 .footer a:hover {
@@ -340,6 +340,10 @@ h3 {
     box-shadow: 10px 10px gray;
 
 }
+
+/*estilo de la pestaña "perros"*/
+
+
 
 /*comienzo del responsive*/
 
@@ -379,6 +383,7 @@ h3 {
 
     }
 }
+
 @media screen and (max-width:479px) {
     header {
         display: flex;

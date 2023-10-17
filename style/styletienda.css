@@ -123,6 +123,8 @@ figure img {
     visibility: hidden;
 }
 
+
+
 .open-popup{
     visibility: visible;
 }
@@ -143,6 +145,7 @@ figure img {
     border-radius: 4px;
     cursor: pointer;
 }
+
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {

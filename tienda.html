@@ -177,15 +177,15 @@
       </article>
       <p class="precio">$1500</p>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo();vermas(item1)"> Ver más </button>
-      <div class="popup" id="popup">
-        <h2 id="titulo"></h2>
-        <p id="descripción"></p>
-        <h3 id="precio"></h3>
+      <button type="submit" class="btn" onclick="abririnfo(popup);vermas(item1)"> Ver más </button>
+      <div class="popup" id="popup1">
+        <h2 id="titulo1"></h2>
+        <p id="descripción1"></p>
+        <h3 id="precio1"></h3>
         <label for="cantidad"><b>Cantidad de unidades</b></label>
 
-        <button type="button" onclick="cerrarinfo(); agregar(item1)">Agregar al Carrito</button>
-        <button type="button" onclick="cerrarinfo()">Cancelar</button>
+        <button type="button" onclick="cerrarinfo(popup); agregar(item1)">Agregar al Carrito</button>
+        <button type="button" onclick="cerrarinfo(popup)">Cancelar</button>
 
       </div>
     </div>
@@ -193,23 +193,23 @@
 
     <!--Producto2-->
 
-    <div class="prod" id="item1">
-      <h4>Hueso</h4>
+    <div class="prod">
+      <h4>Item 2</h4>
       <img src="imagenes/Hueso 1.png" alt="">
       <article class="descorta">
         <p>Hueso de Goma perfecto para cachorros</p>
       </article>
       <p class="precio">$1600</p>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo();vermas(item2)"> Ver más </button>
-      <div class="popup" id="popup">
-        <h2 id="titulo"></h2>
-        <p id="descripción"></p>
-        <h3 id="precio"></h3>
+      <button type="submit" class="btn" onclick="abririnfo(popup2);vermas(item2)"> Ver más </button>
+      <div class="popup" id="popup2">        
+        <h2 id="titulo2"></h2>
+        <p id="descripción2"></p>
+        <h3 id="precio2"></h3>
         <label for="cantidad"><b>Cantidad de unidades</b></label>
 
-        <button type="button" onclick="cerrarinfo(); agregar(item2)">Agregar al Carrito</button>
-        <button type="button" onclick="cerrarinfo()">Cancelar</button>
+        <button type="button" onclick="cerrarinfo(popup2); agregar(item2)">Agregar al Carrito</button>
+        <button type="button" onclick="cerrarinfo(popup2)">Cancelar</button>
 
       </div>
     </div>
@@ -229,6 +229,14 @@
 <div class="carrito-popup" id="carrito">
   <form action="/action_page.php" class="form-container">
     <h1>Tu carrito</h1>
+    <table style="width:100%" id="Tbcarrito">
+      <tr>
+        <th>Item</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+      </tr>
+    </table>
+    <h4>Total a Pagar:</h4>
 
     <p id="total"></p>
 
@@ -238,9 +246,9 @@
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>-->
 
-    <button type="button" class="btn">Pagar</button>
+    <button type="button" class="btn">Ir a Pagar</button>
     <button type="button"class="btn" onclick="limpiarcarrito()">Limpiar carrito</button>
-    <button type="button" class="btn cancel" onclick="cerrarcarrito()">Cancelar</button>
+    <button type="button" class="btn cancel" onclick="cerrarcarrito()">Cerrar</button>
   </form>
 </div>
 

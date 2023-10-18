@@ -73,6 +73,7 @@ function vercarrito() {
 
     var pagar = carrito.total
     document.getElementById("total").innerHTML = pagar 
+    itemscarrito()
   }
   
   function cerrarcarrito() {
@@ -106,4 +107,10 @@ function vercarrito() {
         while (--i){
         tabla.deleteRow(i);
         }
+        
+        var row = tabla.insertRow(-1);
+    
+        var nombre = row.insertCell(0);
+        nombre.innerHTML = "Tu carrito esta vacio"
       }
+

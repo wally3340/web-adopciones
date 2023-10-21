@@ -3,6 +3,88 @@
 }
 
 
+/*estilo de la barra de navegacion*/
+#logo {
+    height: 100px;
+    width: 100px;
+
+
+}
+
+.navbar {
+    padding-bottom: .5rem;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9bd0e;
+    color: #454242;
+}
+
+.brand-title {
+    display: flex;
+    font-size: 1.5rem;
+    margin: .5rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+    margin-top: 1rem;
+
+}
+
+.navbar-links li a {
+    display: block;
+    font-weight: bold;
+    font-size: 25px;
+    /*text-decoration: none;*/
+    color: #454242;
+    padding: 1rem;
+    text-decoration: underline;
+}
+
+.navbar-links li:hover {
+    background-color: #f8df95;
+
+
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
 /*Destacados */
 .thumbnail{
     width: 70%;
@@ -70,11 +152,9 @@ border: 1px solid #f8df95;
     margin: 50px auto;
     font-size: 30px;
     display: grid;
-    /*grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr 1fr;*/
     gap: 12px 12px;
-
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: 515px;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 450px 450px 450px 450px 450px;
     justify-content: center;
 }
 
@@ -88,7 +168,10 @@ border: 1px solid #f8df95;
     border-radius: 10px;
     float: left;
 }
-
+.prod img {
+    max-width: 250px;
+    height: 225px;
+}
 .prod .precios {
     font-size: larger;
     text-align: left;
@@ -161,8 +244,8 @@ border: 1px solid #f8df95;
     text-align: left;
     font-size: 22px;
     margin: 15px 0 10px; 
-    text-decoration: none;
     font-weight: 570;
+    
 }
 
 .cant {
@@ -211,6 +294,23 @@ label {
     border: 1px solid rgb(102, 102, 102);
 }
 
+
+/* Macotas mostradas */
+
+.fotos img {
+    display:block;
+    margin: 20px;
+    max-height: 250px;
+    max-width: 350px;
+    min-height: 20%;
+    min-width: 20%;    
+}
+
+#mascotas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 /* Carrito */
 /* Button used to open the contact form - fixed at the bottom of the page */
@@ -278,4 +378,72 @@ label {
 
 #cerrar:hover, #limpiar:hover {
     filter: brightness(1);
+}
+
+
+
+
+/*Cosas del general*/
+/*estilos del pie de pagina*/
+
+
+
+
+
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links a {
+        flex-direction: column;
+
+    }
 }

@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/*Destacados */
 .thumbnail{
     width: 70%;
     height: 60%;
@@ -10,9 +16,6 @@
     margin-bottom: 10px;
 }
 
-
-
-
 .tarjeta_content {
     font-size: 15px;
     width: 60%;
@@ -22,7 +25,7 @@
 .precio {
     font-size: 25px;
     float: right;
-    padding-left: 80%;
+    padding-left: 70%;
 }
 
 figure {
@@ -55,98 +58,161 @@ figure img {
     
 }
 
+/*background-color: blanchedalmond;
+border: 1px solid #f8df95;
+#f9bd0e
+    background-color: rgb(192, 215, 236);
+    border: 1px solid #CCAFF9
 
-
-* {
-    box-sizing: border-box;
-}
-
-
+/* Todos los productos */ 
 
 .contenedor {
-    width: 70%;
-    border: 5px solid red;
     margin: 50px auto;
     font-size: 30px;
     display: grid;
-    text-align: right;
-    grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr 1fr;
-    gap: 12px;
+    /*grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr 1fr;*/
+    gap: 12px 12px;
+
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 515px;
+    justify-content: center;
 }
 
-.contenedor div {
-    background: yellowgreen;
-    height: auto;
+.contenedor .prod {
+    background:antiquewhite;
     padding: 5px;
-    color: aliceblue;
+    height: auto;
     line-height: 25px;
     text-align: center;
-    border: 5px solid red;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    float: left;
 }
 
-.descorta {
-    font-size:small;
+.prod .precios {
+    font-size: larger;
     text-align: left;
-
+    color: rgb(66, 55, 191);
+    font-weight: 1000;
 }
-.prod .precio {
-    text-align: center;
+.cuotas {
+    font-size: 20px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
+}
+
+.prod h6 {
+    color: rgb(66, 55, 191);
 }
 
 /*Más Info*/
 .info {
     width: 100%;
-    height: 100%;
-    background-color: aliceblue;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .btn{
     padding: 10px 60px;
-    background-color: aqua;
+    background-color: #f9bd0e;
     border: 0;
     outline: none;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 22px; 
     font-weight: 500;
     border-radius: 30px;
 }
+.btn:hover {
+    background-color: #f8df95;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border: 1px solid rgb(102, 102, 102);
+}
 .popup {
     width: 400px;
-    background-color: #f8df95;
+    background-color:#f8df95;
     border-radius: 6px;
     position: absolute;
     text-align: center;
     padding: 0 30px 30px;
-    color: #555;
+    color: black;
     visibility: hidden;
+    border:2px solid black
 }
-
-
 
 .open-popup{
     visibility: visible;
 }
+
 .popup h2 {
     font-size: 38px;
     font-weight: 500;
-    margin: 30px 0 10px;
+    margin: 20px 0 10px;
 }
+
+.desc {
+    text-align: left;
+    font-size: 20px;
+    margin: 15px 0 10px
+}
+
+.popup h3 {
+    text-align: left;
+    font-size: 22px;
+    margin: 15px 0 10px; 
+    text-decoration: none;
+    font-weight: 570;
+}
+
+.cant {
+    border: 1px solid black;
+    padding: 2px;
+    width: 75px;
+    text-align: center;
+    float: right;
+    font-size: 22px;
+
+}
+label {
+    font-size: 22px;
+    font-weight: 570;
+    float: left;
+    margin-top: 8px;
+
+  }
 
 .popup button {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 10px;
     padding: 10px 0;
-    background-color: azure;
     border: 0;
     outline: none;
     font-size: 18px;
     border-radius: 4px;
     cursor: pointer;
+    border-radius: 10px;
+
+}
+.aggc {
+    background-color:  rgb(135, 222, 190);
+    filter: brightness(0.9);
+
+}
+
+.cancel {
+    background-color: #cac7c7;
+    filter: brightness(0.9);
+}
+
+.aggc:hover, .cancel:hover {
+    filter: brightness(1);
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border: 1px solid rgb(102, 102, 102);
 }
 
 
+/* Carrito */
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
   background-color: #555;
@@ -167,7 +233,6 @@ figure img {
   position: fixed;
   bottom: 0;
   right: 15px;
-  border: 3px solid #f1f1f1;
   z-index: 9;
 }
 
@@ -175,42 +240,42 @@ figure img {
 .form-container {
   max-width: 300px;
   padding: 10px;
+  border: 1px solid black;
   background-color: white;
+  border-radius: 10px
 }
 
-/* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-}
-
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: #04AA6D;
-  color: white;
+  background-color: rgb(135, 222, 190);
+  filter: brightness(0.9);
+  color: rgb(0, 0, 0);
   padding: 16px 20px;
   border: none;
   cursor: pointer;
   width: 100%;
   margin-bottom:10px;
-  opacity: 0.8;
+  filter: brightness(0.9)
 }
 
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
+
+#limpiar {
+    background-color: rgb(251, 120, 120);
+    filter: brightness(0.9)
+}
+#cerrar {
+    background-color: #cac7c7;
+    filter: brightness(0.9);
 }
 
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
+.btn:hover, .open-button:hover {
   opacity: 1;
+  filter: brightness(1);
+  border: 1px solid rgb(102, 102, 102);
+}
+
+#cerrar:hover, #limpiar:hover {
+    filter: brightness(1);
 }

@@ -169,23 +169,24 @@
 <div class="contenedor">
 
     <!--Producto1-->
-  <div class="prod" id="item1">
-      <h4>Hueso</h4>
+  <div class="prod">
+      <h4 id="nombre1"></h4>
       <img src="imagenes/Hueso 1.png" alt="">
-      <article class="descorta">
-        <p>Hueso de Goma perfecto para cachorros</p>
-      </article>
-      <p class="precio">$1500</p>
+      <p class="precios" id="precios1"></p>
+      <p class="cuotas" id="cuotas1"></p>
+      <h6>Envío gratis a todo el país</h6>
     <div class="info">
       <button type="submit" class="btn" onclick="abririnfo(popup);vermas(item1)"> Ver más </button>
       <div class="popup" id="popup1">
-        <h2 id="titulo1"></h2>
-        <p id="descripción1"></p>
+        <h2 class="titulos" id="titulo1"></h2>
+        <p class="desc" id="descripción1"></p>
         <h3 id="precio1"></h3>
-        <label for="cantidad"><b>Cantidad de unidades</b></label>
+        <label for="cantidad">Cantidad de unidades</label>
+        <input type="number" class="cant" placeholder="1" name="cantidad" id="cantidad1" min="1" max="99"> 
 
-        <button type="button" onclick="cerrarinfo(popup); agregar(item1)">Agregar al Carrito</button>
-        <button type="button" onclick="cerrarinfo(popup)">Cancelar</button>
+
+        <button type="button" class="aggc" onclick="cerrarinfo(popup); agregar(item1)">Agregar al Carrito</button>
+        <button type="button" class="cancel" onclick="cerrarinfo(popup)">Cancelar</button>
 
       </div>
     </div>
@@ -194,38 +195,33 @@
     <!--Producto2-->
 
     <div class="prod">
-      <h4>Item 2</h4>
+      <h4 id="nombre2" ></h4>
       <img src="imagenes/Hueso 1.png" alt="">
-      <article class="descorta">
-        <p>Hueso de Goma perfecto para cachorros</p>
-      </article>
-      <p class="precio">$1600</p>
+      <p class="precios" id="precios2"></p>
+      <p class="cuotas" id="cuotas2"></p>
+      <h6>Envío gratis a todo el país</h6>
     <div class="info">
       <button type="submit" class="btn" onclick="abririnfo(popup2);vermas(item2)"> Ver más </button>
       <div class="popup" id="popup2">        
-        <h2 id="titulo2"></h2>
-        <p id="descripción2"></p>
+        <h2 class="titulos" id="titulo2"></h2>
+        <p class="desc" id="descripción2"></p>
         <h3 id="precio2"></h3>
-        <label for="cantidad"><b>Cantidad de unidades</b></label>
+        <label for="cantidad">Cantidad de unidades</label>
+        <input type="number" class="cant" placeholder="1" name="cantidad" id="cantidad2" min="1" max="99"> 
 
-        <button type="button" onclick="cerrarinfo(popup2); agregar(item2)">Agregar al Carrito</button>
-        <button type="button" onclick="cerrarinfo(popup2)">Cancelar</button>
+        <button type="button" class="aggc" onclick="cerrarinfo(popup2); agregar(item2)">Agregar al Carrito</button>
+        <button type="button" class="cancel" onclick="cerrarinfo(popup2)">Cancelar</button>
 
       </div>
     </div>
   </div> 
-
-
-
-
-  
-
 </div>
 </main>
+
 <!-- Carrito-->
 <button class="open-button" onclick="vercarrito()">Carrito</button>
 
-<!-- Interior del carrito : Puedo tratar de poner una tabla o un grid -->
+<!-- Interior del carrito -->
 <div class="carrito-popup" id="carrito">
   <form action="/action_page.php" class="form-container">
     <h1>Tu carrito</h1>
@@ -235,20 +231,18 @@
         <th>Cantidad</th>
         <th>Precio</th>
       </tr>
+      <tr>
+        <td>Tu carrito esta vacio</td>
+      </tr>
     </table>
     <h4>Total a Pagar:</h4>
 
     <p id="total"></p>
 
-<!--    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>-->
-
-    <button type="button" class="btn">Ir a Pagar</button>
-    <button type="button"class="btn" onclick="limpiarcarrito()">Limpiar carrito</button>
-    <button type="button" class="btn cancel" onclick="cerrarcarrito()">Cerrar</button>
+    <button type="button" class="btn" id="pagar">Ir a Pagar</button>
+    <button type="button"class="btn" id="limpiar" onclick="limpiarcarrito()">Limpiar carrito</button>
+    <button type="button" class="btn" id="cerrar" onclick="cerrarcarrito()">Cerrar</button>
   </form>
 </div>
 

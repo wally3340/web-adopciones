@@ -46,113 +46,78 @@
   <!--productos destacados-->
 
 <main class="main"> 
-  <h2>Productos Destacados</h2>
-  <section class="destacados">
+  <h2 class="separador">Productos y Noticias Destacadas</h2>
+
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <section class="cards">
-          <article class="tarjeta">
-            <a href="#">
-                <figure class="thumbnail">
-                    <img src="imagenes/Hueso 1.png" alt="producto1">
-                </figure>
-            </a>
-            <div class="tarjeta_content">
-                <p>Hueso de Goma</p> 
-                <p class="precio">$1500</p>
+        <div class="contenedor" id="destacado">
+
+          <!-- Producto Destacado 1-->
+          <div class="prod">
+            <h4>Alimento Dog Chow adultos (21kg)</h4>
+            <img src="imagenes/itemstienda/Alimento P.png" alt="alimento canino Dog Chow"> <br>
+            <p class="precios" id="sindecs">$24.000</p>
+            <p class="precios">$16.800</p> <br>
+            <p class="precios" id="off">30% OFF</p>
+            <h6>Envío gratis a todo el país</h6>
+            <div class="info">
+              <button type="submit" class="btn" onclick="abririnfo(popup21);vermas(item21)"> Ver más </button>
+              <div class="popupD" id="popup21">
+                <h2 class="titulos" id="titulo21"></h2>
+                <p class="desc" id="descripción21"></p>
+                <h3 id="precio21"></h3>
+                <label for="cantidad">Cantidad de unidades</label>
+                <input type="number" class="cant" placeholder="1" name="cantidad" id="cantidad21" min="1" max="99"> 
+  
+  
+                <button type="button" class="aggc" onclick="cerrarinfo(popup21); agregar(item21)">Agregar al Carrito</button>
+                <button type="button" class="cancel" onclick="cerrarinfo(popup21)">Cancelar</button>
+  
+              </div>
             </div>
-        </article>
-        <article class="tarjeta">
-          <a href="#">
-              <figure class="thumbnail">
-                  <img src="imagenes/gato4.jpg" alt="producto2">
-              </figure>
-          </a>
-          <div class="tarjeta_content">
-              <p>Item2</p> <p class="precio">Precio</p>
-          </div>
-        </article>
-        <article class="tarjeta">
-          <a href="#">
-              <figure class="thumbnail">
-                  <img src="imagenes/gato3.jpg" alt="producto3">
-              </figure>
-          </a>
-          <div class="tarjeta_content">
-              <p>Item3</p> <p class="precio">Precio</p>
-          </div>
-      </article>
+          </div> 
+
+          <!-- Producto Destacado 2-->
+          <div class="prod">
+            <h4>Alimento Cat Chow adultos (15kg)</h4>
+            <img src="imagenes/itemstienda/Alimento Gatos.png" alt="alimento felino Cat Chow"> <br>
+            <p class="precios" id="sindecs">$25.000</p>
+            <p class="precios">$17.500</p> <br>
+            <p class="precios" id="off">30% OFF</p>
+            <h6>Envío gratis a todo el país</h6>
+            <div class="info">
+              <button type="submit" class="btn" onclick="abririnfo(popup22);vermas(item22)"> Ver más </button>
+              <div class="popupD" id="popup22">
+                <h2 class="titulos" id="titulo22"></h2>
+                <p class="desc" id="descripción22"></p>
+                <h3 id="precio22"></h3>
+                <label for="cantidad">Cantidad de unidades</label>
+                <input type="number" class="cant" placeholder="1" name="cantidad" id="cantidad22" min="1" max="99"> 
+        
+        
+                <button type="button" class="aggc" onclick="cerrarinfo(popup22); agregar(item22)">Agregar al Carrito</button>
+                <button type="button" class="cancel" onclick="cerrarinfo(popup22)">Cancelar</button>
+              </div>
+            </div>
+          </div> 
+          
+
+
+        </div>
       </div>
+
       <div class="carousel-item">
-        <section class="cards">
-          <article class="tarjeta">
-            <a href="#">
-                <figure class="thumbnail">
-                    <img src="imagenes/Hueso 1.png" alt="producto1">
-                </figure>
-            </a>
-            <div class="tarjeta_content">
-                <p>Hueso de Goma</p> 
-                <p class="precio">$1500</p>
-            </div>
-        </article>
-        <article class="tarjeta">
-          <a href="#">
-              <figure class="thumbnail">
-                  <img src="imagenes/gato4.jpg" alt="producto2">
-              </figure>
-          </a>
-          <div class="tarjeta_content">
-              <p>Item5</p> <p class="precio">Precio</p>
-          </div>
-        </article>
-        <article class="tarjeta">
-          <a href="#">
-              <figure class="thumbnail">
-                  <img src="imagenes/gato3.jpg" alt="producto3">
-              </figure>
-          </a>
-          <div class="tarjeta_content">
-              <p>Item6</p> <p class="precio">Precio</p>
-          </div>
-      </article>
+        <img class="d-block w-100" src="imagenes/Banner1.png" alt="Third slide">
       </div>
+      
       <div class="carousel-item">
-        <section class="cards">
-          <article class="tarjeta">
-            <a href="#">
-                <figure class="thumbnail">
-                    <img src="imagenes/Hueso 1.png" alt="producto1">
-                </figure>
-            </a>
-            <div class="tarjeta_content">
-                <p>Hueso de Goma</p> 
-                <p class="precio">$1500</p>
-            </div>
-        </article>
-        <article class="tarjeta">
-          <a href="#">
-              <figure class="thumbnail">
-                  <img src="imagenes/gato4.jpg" alt="producto2">
-              </figure>
-          </a>
-          <div class="tarjeta_content">
-              <p>Item8</p> <p class="precio">Precio</p>
-          </div>
-        </article>
-        <article class="tarjeta">
-          <a href="#">
-              <figure class="thumbnail">
-                  <img src="imagenes/gato3.jpg" alt="producto3">
-              </figure>
-          </a>
-          <div class="tarjeta_content">
-              <p>Item9</p> <p class="precio">Precio</p>
-          </div>
-      </article>
+          <img class="d-block w-100" src="imagenes/Bannner2.png" alt="Second slide">
       </div>
+
     </div>
+
+
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previo</span>
@@ -162,12 +127,10 @@
       <span class="sr-only">Siguiente</span>
     </a>
   </div>
-  </section>
-
 
 
   <!--todos los productos-->
-<h2>Todos los Productos</h2>
+<h2 class="separador">Todos los Productos</h2>
 <div class="contenedor">
 
     <!--Producto1-->
@@ -178,7 +141,7 @@
       <p class="cuotas" id="cuotas1"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup);vermas(item1)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup1);vermas(item1)"> Ver más </button>
       <div class="popup" id="popup1">
         <h2 class="titulos" id="titulo1"></h2>
         <p class="desc" id="descripción1"></p>
@@ -187,8 +150,8 @@
         <input type="number" class="cant" placeholder="1" name="cantidad" id="cantidad1" min="1" max="99"> 
 
 
-        <button type="button" class="aggc" onclick="cerrarinfo(popup); agregar(item1)">Agregar al Carrito</button>
-        <button type="button" class="cancel" onclick="cerrarinfo(popup)">Cancelar</button>
+        <button type="button" class="aggc" onclick="cerrarinfo(popup1); agregar(item1)">Agregar al Carrito</button>
+        <button type="button" class="cancel" onclick="cerrarinfo(popup1)">Cancelar</button>
 
       </div>
     </div>
@@ -637,10 +600,11 @@
     </div>
 </div>
 
+<!-- Integración API-->
 <div class="fotos">
-  <h1> Algunos de nuestros clientes!</h1>
+  <h2 class="separador"> Algunos de nuestros clientes!</h2>
   <div id="mascotas">
-  </div>
+
 
 </div>
 </main>
@@ -650,7 +614,7 @@
 
 <!-- Interior del carrito -->
 <div class="carrito-popup" id="carrito">
-  <form action="/action_page.php" class="form-container">
+  <form action="/action_page.php" class="contendorCarrito">
     <h1>Tu carrito</h1>
     <table style="width:100%" id="Tbcarrito">
       <tr>

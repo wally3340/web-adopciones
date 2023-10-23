@@ -2,6 +2,20 @@
     box-sizing: border-box;
 }
 
+h2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 30px 0;
+}
+
+.separador {
+    font-weight: bold;
+    background-color:  #f8df95;
+    border: 10px solid #f8df95
+}
 
 /*estilo de la barra de navegacion*/
 #logo {
@@ -54,7 +68,6 @@ h1 {
     display: block;
     font-weight: bold;
     font-size: 25px;
-    /*text-decoration: none;*/
     color: #454242;
     padding: 1rem;
     text-decoration: underline;
@@ -85,66 +98,90 @@ h1 {
 }
 
 
-/*Destacados */
-.thumbnail{
-    width: 70%;
-    height: 60%;
-    border: 2px solid black;
-}
+/*Productos Destacados*/
+.carousel-item img {
+    height: 500px;
+    text-align: center;
 
+}
 
 .carousel-inner {
-    background-color: #f8df95;
-    margin-bottom: 10px;
+    background-color: #6715b0;
+    max-height: 500px;
+    margin-bottom: 20px;
 }
 
-.tarjeta_content {
-    font-size: 15px;
-    width: 60%;
+#destacado {
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 420px 420px;
+    margin-top: 30px;
 
 }
 
-.precio {
-    font-size: 25px;
-    float: right;
-    padding-left: 70%;
+#destacado .prod {
+    border: none;
 }
 
-figure {
-    position: center;
-    display: block;
-    width: 60%;
-    height: auto;
+#destacado .precios {
+    margin: 0;
+    display:inline;
 }
 
-figure img {
-    display: block;
+#sindecs {
+    font-size: medium;
+    text-align: left;
+    color: rgb(97, 97, 97);
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+#off {
+    font-size: large;
+    display:inline;
+    color: rgb(42, 205, 58);
+    font-weight: 500;
+
+}
+
+.popupD {
+    width: 450px;
+    background-color:#f8df95;
+    border-radius: 6px;
+    position: absolute;
+    text-align: center;
+    padding: 0 30px 30px;
+    color: black;
+    visibility: hidden;
+    border:2px solid black;
+    top: 1px;
+}
+
+.popupD button {
     width: 100%;
-    height: 100%;
-    
+    margin-top: 10px;
+    padding: 10px 0;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 10px;
+
 }
 
-
-.tarjeta {
-    margin-bottom: 2em;
-    margin-top: 2em;
-    width: 32%;
-    
+.popupD h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 20px 0 10px;
 }
 
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 10%;
+.popupD h3 {
+    text-align: left;
+    font-size: 22px;
+    margin: 15px 0 10px; 
+    font-weight: 570;
     
 }
-
-/*background-color: blanchedalmond;
-border: 1px solid #f8df95;
-#f9bd0e
-    background-color: rgb(192, 215, 236);
-    border: 1px solid #CCAFF9
 
 /* Todos los productos */ 
 
@@ -189,7 +226,7 @@ border: 1px solid #f8df95;
     color: rgb(66, 55, 191);
 }
 
-/*Más Info*/
+/*Popup Ver Más */
 .info {
     width: 100%;
     height: auto;
@@ -312,6 +349,10 @@ label {
     justify-content: space-between;
 }
 
+#mascotas p {
+    margin: 0;
+    display:inline;
+}
 /* Carrito */
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
@@ -337,7 +378,7 @@ label {
 }
 
 /* Add styles to the form container */
-.form-container {
+.contendorCarrito {
   max-width: 300px;
   padding: 10px;
   border: 1px solid black;
@@ -347,7 +388,7 @@ label {
 
 
 /* Set a style for the submit/login button */
-.form-container .btn {
+.contendorCarrito .btn {
   background-color: rgb(135, 222, 190);
   filter: brightness(0.9);
   color: rgb(0, 0, 0);
@@ -379,8 +420,6 @@ label {
 #cerrar:hover, #limpiar:hover {
     filter: brightness(1);
 }
-
-
 
 
 /*Cosas del general*/

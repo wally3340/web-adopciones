@@ -1,10 +1,10 @@
 
 //Items
 let item1 = {
-    titulo: "Alimento para perros",
+    titulo: "Alimento Dog Chow (2kg)",
     cod: 1,
     precio: 2500,
-    miniinfo: "Nutritivo alimento balanceado para perros de todas las edades (2kg).",
+    miniinfo: "Nutritivo alimento Dog Chow balanceado y con triple proteína, para perros de todas las edades (2kg).",
     encuotas: calcuotas(2500)
 }
 
@@ -100,7 +100,7 @@ let item13 =  {
     titulo: "Jaula para hámsters",
     cod: 13,
     precio: 47500,
-    miniinfo: "Jaula espaciosa con bebedero, comdero, casa, tubos y ruedita. (45x30x45cm)",
+    miniinfo: "Jaula espaciosa con bebedero, comedero, casa, tubos y ruedita. (45x30x45cm)",
     encuotas: calcuotas(47500)
 }
 
@@ -156,8 +156,22 @@ let item20 = {
     titulo: "Jaula para aves",
     cod: 20,
     precio: 14500,
-    miniinfo: "Jaula en forma de arco compacta ideal para pajaros pequeños-medianos. Incluye dos comederos, recogerdos de suciedad, 2 perchas y comlumpio (28x35x49cm).",
+    miniinfo: "Jaula en forma de arco compacta ideal para pajaros pequeños-medianos. Incluye dos comederos, recogeredos de suciedad, 2 perchas y comlumpio (28x35x49cm).",
     encuotas: calcuotas(14500)
+}
+
+let item21 = {
+    titulo: "Alimento Dog Chow adultos (21kg)",
+    cod: 21,
+    precio: 16800,
+    miniinfo: "Nutritivo alimento Dog Chow balanceado y con triple proteína, para perros adultos y grandes (21kg).",
+}
+
+let item22 = {
+    titulo: "Alimento Cat Chow adultos (15kg)",
+    cod: 22,
+    precio: 17500,
+    miniinfo: "Nutritivo alimento Cat Chow multiproteínas proteína, para gatos adultos (15kg).",
 }
 
 
@@ -197,10 +211,13 @@ let carrito = {
 }
 
 // Popup agregar al carrito
-let popup = document.getElementById("popup1")
-let popup2 = document.getElementById("popup2")
+let popupD2 = document.getElementById("popup22")
+let popupD = document.getElementById("popup21")
+
+
 
 let tabla = document.getElementById("Tbcarrito")
+
 
 function abririnfo(id) {
     id.classList.add("open-popup")
@@ -277,11 +294,7 @@ function cerrarcarrito() {
 }
 
 function itemscarrito() {
-   // if (carrito.items.length == 0) {
-    //   var row = tabla.insertRow(1);
-    //
-    //    var nombre = row.insertCell(0);
-    //    nombre.innerHTML = "Tu carrito esta vacio";
+
     if (carrito.items.length > 0){
         limpiartabla()
         for (var i = 1; i <= carrito.items.length; i++) { 
@@ -306,14 +319,15 @@ function limpiartabla() {
     } 
 }
 
-// Lo de abajo
+//Optención de imagenes de máscotas
 
-const api_url1 = `https://api.thecatapi.com/v1/images/search?category_ids=15`
-const api_url2 = `https://api.thedogapi.com/v1/images/search`
-const api_url3 = `https://api.thecatapi.com/v1/images/search?category_ids=15`
-const api_url4 = `https://api.thedogapi.com/v1/images/search`
+const api_url1 = `https://api.thecatapi.com/v1/images/search?category_ids=15&api_key=live_k4645H90H9ssfYfJHyk0UQrvqjJPhOz54S3nPjpr9QnUNpUfB47rZyY8bo1xm9l2`
+const api_url2 = `https://api.thedogapi.com/v1/images/search?api_key=live_k4645H90H9ssfYfJHyk0UQrvqjJPhOz54S3nPjpr9QnUNpUfB47rZyY8bo1xm9l2`
+const api_url3 = `https://api.thecatapi.com/v1/images/search?category_ids=15&api_key=live_k4645H90H9ssfYfJHyk0UQrvqjJPhOz54S3nPjpr9QnUNpUfB47rZyY8bo1xm9l2`
+const api_url4 = `https://api.thedogapi.com/v1/images/search?api_key=live_k4645H90H9ssfYfJHyk0UQrvqjJPhOz54S3nPjpr9QnUNpUfB47rZyY8bo1xm9l2`
 
 clientes = [api_url1, api_url2, api_url3, api_url4]
+nombres = ["Uma", "Chicha", "Chiqui","Copito", "Manchitas", "Suertudo", "Pochita"]
 
 async function obtenerimg() {
     for (i of clientes) {
@@ -322,11 +336,22 @@ async function obtenerimg() {
         const data=await response.json()
         let img = document.createElement("img")
         let imagen = data[0].url
+
+        let p = document.createElement("p")
+        let name = nombres[Math.floor((Math.random()*nombres.length))]
     
         img.setAttribute("src", imagen)
-    
+
+        img.setAttribute("title", nombres[Math.floor((Math.random()*nombres.length))])
+
+        //p.innerHTML = name
+        
+        
+        
         let divider = document.getElementById("mascotas")
         divider.appendChild(img)
+        divider.appendChild(p)
+
 
 
     }

@@ -1,0 +1,79 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.nosotros{
+    margin: 10px 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ 
+}
+.tit, .reseña{
+    
+   display: inline;
+    width: 45%;
+    margin-top: 100px;
+   
+    padding:10px;
+
+   
+   
+   
+}
+.tit{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(80, 10, 10);
+    
+}
+.reseña{
+    font-size: 15px;
+}
+.equipos{
+    margin-top: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+    background-color: #f8df95;
+}
+.equipos img{
+    width: 200px;
+    height: 200px;
+   
+}
+#fondo{
+    width:160px;
+    height:40px;
+    margin-left:80vh;
+    margin-bottom: 20px;
+    padding:3px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #f8df95;
+    text-decoration: none;
+    
+
+}
+#fondo:hover{
+    border: 2px solid #f8df95;
+    background-color: aliceblue;
+   
+   
+  
+}
+
+@media screen and (width:690px){
+    .equipos img{
+        display: flex;
+        flex-direction: column;
+    }
+    .nosotros{
+        flex-direction: column;
+    }
+    
+}

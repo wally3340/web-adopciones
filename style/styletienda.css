@@ -333,6 +333,10 @@ label {
 
 
 /* Macotas mostradas */
+.fotos {
+    background-color:antiquewhite;
+    padding-bottom: 30px;
+}
 
 .fotos img {
     display:block;
@@ -353,8 +357,10 @@ label {
     margin: 0;
     display:inline;
 }
+
+
 /* Carrito */
-/* Button used to open the contact form - fixed at the bottom of the page */
+
 .open-button {
   background-color: #555;
   color: white;
@@ -366,9 +372,9 @@ label {
   bottom: 23px;
   right: 28px;
   width: 280px;
+  border-radius: 10px;
 }
 
-/* The popup form - hidden by default */
 .carrito-popup {
   display: none;
   position: fixed;
@@ -377,7 +383,6 @@ label {
   z-index: 9;
 }
 
-/* Add styles to the form container */
 .contendorCarrito {
   max-width: 300px;
   padding: 10px;
@@ -386,8 +391,6 @@ label {
   border-radius: 10px
 }
 
-
-/* Set a style for the submit/login button */
 .contendorCarrito .btn {
   background-color: rgb(135, 222, 190);
   filter: brightness(0.9);
@@ -400,7 +403,6 @@ label {
   filter: brightness(0.9)
 }
 
-
 #limpiar {
     background-color: rgb(251, 120, 120);
     filter: brightness(0.9)
@@ -410,7 +412,6 @@ label {
     filter: brightness(0.9);
 }
 
-/* Add some hover effects to buttons */
 .btn:hover, .open-button:hover {
   opacity: 1;
   filter: brightness(1);
@@ -423,11 +424,77 @@ label {
 
 
 /*Cosas del general*/
+
+
 /*estilos del pie de pagina*/
+footer {
+    min-width: 400px;
+    width: 100%;
+    min-height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+.footer {
+    display: inline;
+    justify-content: space-between;
+    background-color: blanchedalmond;
+    border: 1px solid #f8df95;
+    border-radius: 10px;
+
+}
+
+#txtfooter {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
+    margin-bottom: 15px;
+    font-weight: bolder;
+    font-size: 35px;
+    font-style: normal;
+}
+
+.footer a {
+    margin: 10px 40px;
+    color: blue;
+    background-color: blanchedalmond;
+}
+
+.footer a:hover {
+    background-color: rgb(192, 215, 236);
+    border: 1px solid rgb(90, 163, 241);
+    scale: 1.3;
+    transition: 300ms;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.copyright p {
+    font-family: cursive;
+    margin-left: 10px;
+}
+
+.imagen {
+    max-width: 500px;
+    width: 60%;
+    height: 200px;
+    margin-top: 20px;
+    box-shadow: 10px 10px gray;
+}
 
 
 
-
+/*comienzo del responsive*/
 
 
 @media (max-width: 800px) {

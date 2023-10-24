@@ -173,6 +173,19 @@ let item22 = {
     precio: 17500,
     miniinfo: "Nutritivo alimento Cat Chow multiproteínas proteína, para gatos adultos (15kg).",
 }
+let item212 = {
+    titulo: "Alimento Dog Chow adultos (21kg)",
+    cod: 212,
+    precio: 16800,
+    miniinfo: "Nutritivo alimento Dog Chow balanceado y con triple proteína, para perros adultos y grandes (21kg).",
+}
+
+let item222 = {
+    titulo: "Alimento Cat Chow adultos (15kg)",
+    cod: 222,
+    precio: 17500,
+    miniinfo: "Nutritivo alimento Cat Chow multiproteínas proteína, para gatos adultos (15kg).",
+}
 
 
 function calcuotas(precio){
@@ -210,20 +223,38 @@ let carrito = {
     total: 0
 }
 
+
 // Popup agregar al carrito
 let popupD2 = document.getElementById("popup22")
-let popupD = document.getElementById("popup21")
+let popupD1 = document.getElementById("popup21")
+let popupD22 = document.getElementById("popup22")
+let popupD12 = document.getElementById("popup21")
 
 
+
+let popupC = document.getElementById("carrito")
 
 let tabla = document.getElementById("Tbcarrito")
 
 
-function abririnfo(id) {
-    id.classList.add("open-popup")
+function abririnfo(popup) {
+    popup.classList.add("open-popup")
 }
-function cerrarinfo(id) {
-    id.classList.remove("open-popup")
+function cerrarinfo(popup) {
+    popup.classList.remove("open-popup")
+
+}
+
+function cerrarotros(popup) {
+    var popups = [popup1, popup2, popup3, popup4, popup5, popup6, popup7, popup8, popup9, popup10, popup11, popup12, popup13,
+                  popup14, popup15, popup16, popup17, popup18, popup19, popup20, popupD1, popupD2, popupD12, popupD22]
+    for (i of popups) {
+        if (i != popup) {
+            if (i.classList.contains("open-popup") == true) {
+                i.classList.remove("open-popup")
+            }
+        }
+    }
 }
 
 function vermas(id) {
@@ -241,17 +272,17 @@ function vermas(id) {
 function agregar(id){
     var cant = document.getElementById("cantidad" + id.cod).value
     var cant = parseInt(cant) 
-    if (cant <= 0 || cant % 1 != 0) {
-        alert("Por favor, ingrese un valor entero y mayor que 0")
+    if (cant <= 0 || cant > 20 || cant % 1 != 0) {
+        alert("Por favor, ingrese un valor entero, y entre 0 y 20")
     } else {
         for (i of carrito.items) { 
             if (i == id.titulo) {
                 x = carrito.items.indexOf(i)
                 cantviejas = carrito.cantidades[x]
                 carrito.cantidades[x] = carrito.cantidades[x] + cant
-                carrito.total = carrito.total + id.precio * (carrito.cantidades[x] - cantviejas)
+                carrito.total =  carrito.total + id.precio * (carrito.cantidades[x] - cantviejas)
                 var pagar = carrito.total
-                document.getElementById("total").innerHTML = pagar
+                document.getElementById("total").innerHTML = "$ " + pagar
                 itemscarrito()
                 return
             }
@@ -262,10 +293,19 @@ function agregar(id){
     carrito.precio.push(id.precio)
     carrito.total = carrito.total + id.precio * carrito.cantidades[carrito.cantidades.length -1];
     var pagar = carrito.total
-    document.getElementById("total").innerHTML = pagar 
+    document.getElementById("total").innerHTML = "$ " + pagar
 
     itemscarrito()
     
+    }
+}
+
+function checkpago(){
+    if (carrito.items.length ==0) {
+        alert("Tu carrito está vacio!")
+    } else {
+        alert("Tu pago fue procesado correctamente")
+        limpiarcarrito()
     }
 }
 
@@ -282,15 +322,17 @@ function limpiarcarrito(){
 }
 
 function vercarrito() {
-    document.getElementById("carrito").style.display = "block";
+
+    popupC.classList.add("visible");
+
 
     var pagar = carrito.total
-    document.getElementById("total").innerHTML = pagar 
+    document.getElementById("total").innerHTML = "$" + pagar 
     itemscarrito()
   }
   
 function cerrarcarrito() {
-    document.getElementById("carrito").style.display = "none";
+    popupC.classList.remove("visible");
 }
 
 function itemscarrito() {
@@ -306,7 +348,7 @@ function itemscarrito() {
             var cantidad = row.insertCell(1);
             nombre.innerHTML = carrito.items[x];
             cantidad.innerHTML = carrito.cantidades[x];
-            precio.innerHTML = carrito.precio[x] * carrito.cantidades[x];
+            precio.innerHTML = "$" + carrito.precio[x] * carrito.cantidades[x];
         }
     }
 }
@@ -341,13 +383,10 @@ async function obtenerimg() {
         let name = nombres[Math.floor((Math.random()*nombres.length))]
     
         img.setAttribute("src", imagen)
-
+        img.setAttribute("class", "imgmascota")
         img.setAttribute("title", nombres[Math.floor((Math.random()*nombres.length))])
-
-        //p.innerHTML = name
         
-        
-        
+            
         let divider = document.getElementById("mascotas")
         divider.appendChild(img)
         divider.appendChild(p)

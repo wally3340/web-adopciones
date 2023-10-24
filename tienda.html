@@ -33,7 +33,7 @@
       <div class="navbar-links">
         <ul>
           <li><a href="index.html" target="_blank">Home</a></li>    
-          <li><a href="#" target="_blank">Nosotros</a></li>
+          <li><a href="nosotros.html" target="_blank">Nosotros</a></li>
           <li><a href="contacto.html" target="_blank">Contacto</a></li>
           <li><a href="perrosygatos.html" target="_blank">Perros y Gatos</a></li>
           <li><a href="tienda.html" target="_blank">Tienda</a></li>
@@ -48,21 +48,21 @@
 <main class="main"> 
   <h2 class="separador">Productos y Noticias Destacadas</h2>
 
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
+  <div id="Controles1" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" >
       <div class="carousel-item active">
         <div class="contenedor" id="destacado">
 
           <!-- Producto Destacado 1-->
           <div class="prod">
             <h4>Alimento Dog Chow adultos (21kg)</h4>
-            <img src="imagenes/itemstienda/Alimento P.png" alt="alimento canino Dog Chow"> <br>
+            <img class="imgdes" src="imagenes/itemstienda/Alimento P.png" alt="alimento canino Dog Chow"> <br>
             <p class="precios" id="sindecs">$24.000</p>
             <p class="precios">$16.800</p> <br>
             <p class="precios" id="off">30% OFF</p>
             <h6>Envío gratis a todo el país</h6>
             <div class="info">
-              <button type="submit" class="btn" onclick="abririnfo(popup21);vermas(item21)"> Ver más </button>
+              <button type="submit" class="btn" onclick="abririnfo(popup21);vermas(item21);cerrarotros(popupD1)"> Ver más </button>
               <div class="popupD" id="popup21">
                 <h2 class="titulos" id="titulo21"></h2>
                 <p class="desc" id="descripción21"></p>
@@ -81,13 +81,13 @@
           <!-- Producto Destacado 2-->
           <div class="prod">
             <h4>Alimento Cat Chow adultos (15kg)</h4>
-            <img src="imagenes/itemstienda/Alimento Gatos.png" alt="alimento felino Cat Chow"> <br>
+            <img class="imgdes" src="imagenes/itemstienda/Alimento Gatos.png" alt="alimento felino Cat Chow"> <br>
             <p class="precios" id="sindecs">$25.000</p>
             <p class="precios">$17.500</p> <br>
             <p class="precios" id="off">30% OFF</p>
             <h6>Envío gratis a todo el país</h6>
             <div class="info">
-              <button type="submit" class="btn" onclick="abririnfo(popup22);vermas(item22)"> Ver más </button>
+              <button type="submit" class="btn" onclick="abririnfo(popup22);vermas(item22);cerrarotros(popupD2)"> Ver más </button>
               <div class="popupD" id="popup22">
                 <h2 class="titulos" id="titulo22"></h2>
                 <p class="desc" id="descripción22"></p>
@@ -118,11 +118,97 @@
     </div>
 
 
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#Controles1" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previo</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#Controles1" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
+
+  <!--productos destacados2-->     
+        <!-- Esta versión es exactamente igual a la anterior, salvo que tiene un slide de carrusel extra para el segundo
+        producto destacado. Esto fue necesario para asegurar el correcto funcionamiento en dispositivos moviles, ya que
+        no es posile cambiar la cantidad de forma automatica. Para superar este inconveniente, se creo este segundo recurso 
+        oculto hasta que el tamaño de pantalla es el correspondiente, momento en el cual el anterior pasa a ser el oculto -->
+
+  <div id="Controles2" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" >
+      <div class="carousel-item active">
+        <div class="contenedor" id="destacado">
+
+          <!-- Producto Destacado 1-->
+          <div class="prod">
+            <h4>Alimento Dog Chow adultos (21kg)</h4>
+            <img class="imgdes" src="imagenes/itemstienda/Alimento P.png" alt="alimento canino Dog Chow"> <br>
+            <p class="precios" id="sindecs">$24.000</p>
+            <p class="precios">$16.800</p> <br>
+            <p class="precios" id="off">30% OFF</p>
+            <h6>Envío gratis a todo el país</h6>
+            <div class="info">
+              <button type="submit" class="btn" onclick="abririnfo(popup212);vermas(item212);cerrarotros(popupD2)"> Ver más </button>
+              <div class="popupD" id="popup212">
+                <h2 class="titulos" id="titulo212"></h2>
+                <p class="desc" id="descripción212"></p>
+                <h3 id="precio212"></h3>
+                <label for="cantidad">Cantidad de unidades</label>
+                <input type="number" class="cant" placeholder="1" name="cantidad" id="cantidad212" min="1" max="99"> 
+  
+  
+                <button type="button" class="aggc" onclick="cerrarinfo(popup212); agregar(item212)">Agregar al Carrito</button>
+                <button type="button" class="cancel" onclick="cerrarinfo(popup212)">Cancelar</button>
+  
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="contenedor" id="destacado">
+          <!-- Producto Destacado 2-->
+          <div class="prod">
+            <h4>Alimento Cat Chow adultos (15kg)</h4>
+            <img class="imgdes" src="imagenes/itemstienda/Alimento Gatos.png" alt="alimento felino Cat Chow"> <br>
+            <p class="precios" id="sindecs">$25.000</p>
+            <p class="precios">$17.500</p> <br>
+            <p class="precios" id="off">30% OFF</p>
+            <h6>Envío gratis a todo el país</h6>
+            <div class="info">
+              <button type="submit" class="btn" onclick="abririnfo(popup222);vermas(item222);cerrarotros(popupD22)"> Ver más </button>
+              <div class="popupD" id="popup222">
+                <h2 class="titulos" id="titulo222"></h2>
+                <p class="desc" id="descripción222"></p>
+                <h3 id="precio222"></h3>
+                <label for="cantidad">Cantidad de unidades</label>
+                <input type="number" class="cant" placeholder="1" name="cantidad" id="cantidad222" min="1" max="99"> 
+        
+        
+                <button type="button" class="aggc" onclick="cerrarinfo(popup222); agregar(item222)">Agregar al Carrito</button>
+                <button type="button" class="cancel" onclick="cerrarinfo(popup222)">Cancelar</button>
+              </div>
+            </div>
+          </div> 
+        </div> 
+      </div>
+
+      <div class="carousel-item">
+        <img class="d-block w-100" src="imagenes/Banner1(mobile).png" alt="Third slide">
+      </div>
+      
+      <div class="carousel-item">
+          <img class="d-block w-100" src="imagenes/Banner2(mobile).png" alt="Second slide">
+      </div>
+
+    </div>
+
+    <a class="carousel-control-prev" href="#Controles2" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previo</span>
+    </a>
+    <a class="carousel-control-next" href="#Controles2" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Siguiente</span>
     </a>
@@ -131,7 +217,7 @@
 
   <!--todos los productos-->
 <h2 class="separador">Todos los Productos</h2>
-<div class="contenedor">
+<div class="contenedor" id="conttodos">
 
     <!--Producto1-->
   <div class="prod">
@@ -141,7 +227,7 @@
       <p class="cuotas" id="cuotas1"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup1);vermas(item1)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup1);vermas(item1);cerrarotros(popup1)"> Ver más </button>
       <div class="popup" id="popup1">
         <h2 class="titulos" id="titulo1"></h2>
         <p class="desc" id="descripción1"></p>
@@ -166,7 +252,7 @@
       <p class="cuotas" id="cuotas2"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup2);vermas(item2)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup2);vermas(item2);cerrarotros(popup2)"> Ver más </button>
       <div class="popup" id="popup2">        
         <h2 class="titulos" id="titulo2"></h2>
         <p class="desc" id="descripción2"></p>
@@ -189,7 +275,7 @@
       <p class="cuotas" id="cuotas3"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup3);vermas(item3)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup3);vermas(item3);cerrarotros(popup3)"> Ver más </button>
       <div class="popup" id="popup3">        
         <h2 class="titulos" id="titulo3"></h2>
         <p class="desc" id="descripción3"></p>
@@ -212,7 +298,7 @@
       <p class="cuotas" id="cuotas4"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup4);vermas(item4)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup4);vermas(item4);cerrarotros(popup4)"> Ver más </button>
       <div class="popup" id="popup4">        
         <h2 class="titulos" id="titulo4"></h2>
         <p class="desc" id="descripción4"></p>
@@ -235,7 +321,7 @@
       <p class="cuotas" id="cuotas5"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup5);vermas(item5)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup5);vermas(item5);cerrarotros(popup5)"> Ver más </button>
       <div class="popup" id="popup5">        
         <h2 class="titulos" id="titulo5"></h2>
         <p class="desc" id="descripción5"></p>
@@ -258,7 +344,7 @@
       <p class="cuotas" id="cuotas6"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup6);vermas(item6)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup6);vermas(item6);cerrarotros(popup6)"> Ver más </button>
       <div class="popup" id="popup6">        
         <h2 class="titulos" id="titulo6"></h2>
         <p class="desc" id="descripción6"></p>
@@ -281,7 +367,7 @@
       <p class="cuotas" id="cuotas7"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup7);vermas(item7)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup7);vermas(item7);cerrarotros(popup7)"> Ver más </button>
       <div class="popup" id="popup7">        
         <h2 class="titulos" id="titulo7"></h2>
         <p class="desc" id="descripción7"></p>
@@ -304,7 +390,7 @@
       <p class="cuotas" id="cuotas8"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup8);vermas(item8)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup8);vermas(item8);cerrarotros(popup8)"> Ver más </button>
       <div class="popup" id="popup8">        
         <h2 class="titulos" id="titulo8"></h2>
         <p class="desc" id="descripción8"></p>
@@ -327,7 +413,7 @@
       <p class="cuotas" id="cuotas9"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup9);vermas(item9)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup9);vermas(item9);cerrarotros(popup9)"> Ver más </button>
       <div class="popup" id="popup9">        
         <h2 class="titulos" id="titulo9"></h2>
         <p class="desc" id="descripción9"></p>
@@ -351,7 +437,7 @@
       <p class="cuotas" id="cuotas10"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup10);vermas(item10)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup10);vermas(item10);cerrarotros(popup10)"> Ver más </button>
       <div class="popup" id="popup10">        
         <h2 class="titulos" id="titulo10"></h2>
         <p class="desc" id="descripción10"></p>
@@ -374,7 +460,7 @@
       <p class="cuotas" id="cuotas11"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup11);vermas(item11)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup11);vermas(item11);cerrarotros(popup11)"> Ver más </button>
       <div class="popup" id="popup11">        
         <h2 class="titulos" id="titulo11"></h2>
         <p class="desc" id="descripción11"></p>
@@ -398,7 +484,7 @@
       <p class="cuotas" id="cuotas12"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup12);vermas(item12)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup12);vermas(item12);cerrarotros(popup12)"> Ver más </button>
       <div class="popup" id="popup12">        
         <h2 class="titulos" id="titulo12"></h2>
         <p class="desc" id="descripción12"></p>
@@ -430,7 +516,7 @@
         <label for="cantidad">Cantidad de unidades</label>
         <input type="number" class="cant" placeholder="1" name="cantidad" id="cantidad13" min="1" max="99"> 
 
-        <button type="button" class="aggc" onclick="cerrarinfo(popup13); agregar(item13)">Agregar al Carrito</button>
+        <button type="button" class="aggc" onclick="cerrarinfo(popup13); agregar(item13);cerrarotros(popup13)">Agregar al Carrito</button>
         <button type="button" class="cancel" onclick="cerrarinfo(popup13)">Cancelar</button>
       </div>
     </div>
@@ -446,7 +532,7 @@
       <p class="cuotas" id="cuotas14"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup14);vermas(item14)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup14);vermas(item14);;cerrarotros(popup14)"> Ver más </button>
       <div class="popup" id="popup14">        
         <h2 class="titulos" id="titulo14"></h2>
         <p class="desc" id="descripción14"></p>
@@ -469,7 +555,7 @@
       <p class="cuotas" id="cuotas15"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup15);vermas(item15)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup15);vermas(item15);cerrarotros(popup15)"> Ver más </button>
       <div class="popup" id="popup15">        
         <h2 class="titulos" id="titulo15"></h2>
         <p class="desc" id="descripción15"></p>
@@ -492,7 +578,7 @@
       <p class="cuotas" id="cuotas16"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup16);vermas(item16)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup16);vermas(item16);cerrarotros(popup16)"> Ver más </button>
       <div class="popup" id="popup16">        
         <h2 class="titulos" id="titulo16"></h2>
         <p class="desc" id="descripción16"></p>
@@ -515,7 +601,7 @@
       <p class="cuotas" id="cuotas17"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup17);vermas(item17)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup17);vermas(item17);cerrarotros(popup17)"> Ver más </button>
       <div class="popup" id="popup17">        
         <h2 class="titulos" id="titulo17"></h2>
         <p class="desc" id="descripción17"></p>
@@ -538,7 +624,7 @@
       <p class="cuotas" id="cuotas18"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup18);vermas(item18)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup18);vermas(item18);cerrarotros(popup18)"> Ver más </button>
       <div class="popup" id="popup18">        
         <h2 class="titulos" id="titulo18"></h2>
         <p class="desc" id="descripción18"></p>
@@ -561,7 +647,7 @@
       <p class="cuotas" id="cuotas19"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup19);vermas(item19)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup19);vermas(item19);cerrarotros(popup19)"> Ver más </button>
       <div class="popup" id="popup19">        
         <h2 class="titulos" id="titulo19"></h2>
         <p class="desc" id="descripción19"></p>
@@ -585,7 +671,7 @@
       <p class="cuotas" id="cuotas20"></p>
       <h6>Envío gratis a todo el país</h6>
     <div class="info">
-      <button type="submit" class="btn" onclick="abririnfo(popup20);vermas(item20)"> Ver más </button>
+      <button type="submit" class="btn" onclick="abririnfo(popup20);vermas(item20); cerrarotros(popup20)"> Ver más </button>
       <div class="popup" id="popup20">        
         <h2 class="titulos" id="titulo20"></h2>
         <p class="desc" id="descripción20"></p>
@@ -611,13 +697,14 @@
 </main>
 
 <!-- Carrito-->
-<button class="open-button" onclick="vercarrito()">Carrito</button>
-
+<button class="open-button" onclick="vercarrito()"><i class="fa-solid fa-cart-shopping"></i><i class="fa-solid fa-cart-shopping fa-bounce" id="iconoC"></i></button>
+<!-- <img src="imagenes/carrito-de-compras.png" alt=""> -->
 <!-- Interior del carrito -->
 <div class="carrito-popup" id="carrito">
-  <form action="/action_page.php" class="contendorCarrito">
-    <h1>Tu carrito</h1>
-    <table style="width:100%" id="Tbcarrito">
+  <div class="contendorCarrito">
+    <h1>Tu carrito</h1> 
+    <div class="carro">
+    <table class="carro" style="width:100%" id="Tbcarrito">
       <tr>
         <th>Item</th>
         <th>Cantidad</th>
@@ -627,15 +714,16 @@
         <td>Tu carrito esta vacio</td>
       </tr>
     </table>
+  </div>
     <h4>Total a Pagar:</h4>
 
     <p id="total"></p>
 
 
-    <button type="button" class="btn" id="pagar">Ir a Pagar</button>
+    <button type="button" class="btn" id="pagar" onclick="checkpago()">Pagar</button>
     <button type="button"class="btn" id="limpiar" onclick="limpiarcarrito()">Limpiar carrito</button>
     <button type="button" class="btn" id="cerrar" onclick="cerrarcarrito()">Cerrar</button>
-  </form>
+</div>
 </div>
 
 <footer>

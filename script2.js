@@ -12,3 +12,5 @@ let footer =  `    <h3 id="txtfooter">Encontranos en nuestras redes</h3>
 </div>
 <img class="imagen" src="imagenes/footer.jpg" alt="fondo de mascotas">`
 document.querySelector("footer").innerHTML = footer;
+
+

@@ -6,7 +6,8 @@ let footer =  `    <h3 id="txtfooter">Encontranos en nuestras redes</h3>
     <a href="http//:www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
 </div>
 <div class="copyright"><i class="fa-solid fa-copyright"></i>
-    <p>Desarrollado por:</p>
+    <p>Desarrollado por:Grupo 17, Comision 23517,<br> 
+    Codo a Codo FullStack Python, Año 2023</p>
     <div class="div"></div>
     
 </div>

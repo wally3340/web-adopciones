@@ -32,37 +32,31 @@ p {
 
 /*estilos del formulario*/
 form {
-
     background-color: #f8df95;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding:1rem;
+    padding: 1rem;
     font-size: x-large;
-
-
-
-
-
 }
 
-.btn {
+/*.btn {
     display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: #f8df95;
     padding: 10px;
-}
-.botones{
+}*/
+/*button{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #f8df95;
-}
+}*/
 
-#boton, #boton2{
+button {
 
     width: 8rem;
     height: 30px;
@@ -70,10 +64,12 @@ form {
     background-color: rgb(90, 163, 241);
     color: aliceblue;
     border-radius: 5px;
+    cursor:pointer;
+    
 }
 
-#boton:hover,#boton2:hover {
-    cursor: pointer;
+button:hover {
+   
     transform: scale(1.13);
 
 }
@@ -84,6 +80,16 @@ form input {
     max-width: 30rem;
 
 }
+
+#validar_nombre,
+#validar_apellido,
+#validar_zipcode,
+#validar_telefono,
+#validar_email,
+#validar_street {
+    color: #ec5109;
+}
+
 
 
 /*estilos del pie de pagina*/
@@ -159,43 +165,49 @@ h3 {
     box-shadow: 10px 10px gray;
 
 }
+
 @media screen and (max-width:768px) {
-    body{
-        width:90%
+    body {
+        width: 90%
     }
-    form{
+
+    form {
         flex-direction: column;
         justify-content: space-evenly;
 
     }
-    .form1{
+
+    .form1 {
         max-width: 50%;
         margin-left: 30%;
     }
-    .form2{
+
+    .form2 {
         max-width: 50%;
         margin-left: 30%;
 
     }
-    
+
 }
-@media screen and (max-width:470px){
-    body{
+
+@media screen and (max-width:470px) {
+    body {
         max-width: 100%;
 
     }
-    form{
+
+    form {
         font-size: 20px;
     }
-    input{
+
+    input {
         max-width: 40%;
     }
-    .footer{
+
+    .footer {
         max-width: 50%;
-       
+
     }
 
 
 }
-
-    
